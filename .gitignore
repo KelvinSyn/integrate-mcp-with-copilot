@@ -25,6 +25,10 @@
 *.log
 *.sql
 *.sqlite
+*.db
+
+# Data directory for SQLite
+src/data/
 
 # OS generated files #
 ######################
