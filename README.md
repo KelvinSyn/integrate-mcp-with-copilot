@@ -43,6 +43,40 @@ If the exercise isn't ready in 20 seconds, please check the [Actions](../../acti
 
 </details>
 
+## The Mergington High School Activities Application
+
+This exercise includes a sample FastAPI application for managing extracurricular activities at Mergington High School. The application allows students to view available activities and sign up for them.
+
+### Quick Start
+
+To run the application locally:
+
+1. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Start the server**:
+   ```bash
+   cd src
+   uvicorn app:app --reload
+   ```
+
+3. **Access the application**:
+   - Web interface: http://localhost:8000
+   - API documentation (Swagger UI): http://localhost:8000/docs
+   - Alternative API docs (ReDoc): http://localhost:8000/redoc
+
+For detailed information about the API, features, and usage examples, see the [Application README](src/README.md).
+
+### Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on how to get started.
+
+### Code of Conduct
+
+This project adheres to a Code of Conduct. By participating, you are expected to uphold this code. Please read the [Code of Conduct](CODE_OF_CONDUCT.md) for details.
+
 ---
 
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+&copy; 2025 GitHub &bull; [Code of Conduct](CODE_OF_CONDUCT.md) &bull; [MIT License](https://gh.io/mit)
