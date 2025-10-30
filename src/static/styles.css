@@ -223,6 +223,7 @@ footer {
 }
 
 /* FAQ Section Styles */
+/* FAQ container is wider (800px) than other sections to accommodate longer Q&A content */
 #faq-container {
   max-width: 800px;
   width: 100%;

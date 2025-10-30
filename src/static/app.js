@@ -129,12 +129,15 @@ document.addEventListener("DOMContentLoaded", () => {
         faqItem.setAttribute("data-question", item.question.toLowerCase());
         faqItem.setAttribute("data-answer", item.answer.toLowerCase());
 
+        // Sanitize category name for use in IDs (replace spaces and special chars with hyphens)
+        const categoryId = category.category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
         const question = document.createElement("div");
         question.className = "faq-question";
         question.setAttribute("tabindex", "0");
         question.setAttribute("role", "button");
         question.setAttribute("aria-expanded", "false");
-        question.setAttribute("aria-controls", `faq-answer-${category.category}-${index}`);
+        question.setAttribute("aria-controls", `faq-answer-${categoryId}-${index}`);
         question.innerHTML = `
           <span>${item.question}</span>
           <span class="faq-icon">▼</span>
@@ -142,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const answer = document.createElement("div");
         answer.className = "faq-answer";
-        answer.id = `faq-answer-${category.category}-${index}`;
+        answer.id = `faq-answer-${categoryId}-${index}`;
         answer.setAttribute("role", "region");
         answer.innerHTML = `<p>${item.answer}</p>`;
 
