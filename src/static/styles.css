@@ -28,6 +28,30 @@ header h1 {
   margin-bottom: 10px;
 }
 
+.user-section {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-section input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 250px;
+}
+
+.user-section button {
+  padding: 8px 15px;
+}
+
+#user-role {
+  color: #ffd700;
+  font-weight: bold;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -197,4 +221,77 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+/* Notification styles */
+#notifications-container {
+  max-width: 100%;
+}
+
+.notification-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 4px solid #1a237e;
+  background-color: #f0f4ff;
+  border-radius: 4px;
+}
+
+.notification-item .timestamp {
+  font-size: 0.8em;
+  color: #666;
+}
+
+/* Admin panel styles */
+.admin-section {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.admin-section h4 {
+  margin-bottom: 15px;
+  color: #1a237e;
+}
+
+.admin-section button {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+/* Reports styles */
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.report-table th,
+.report-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.report-table th {
+  background-color: #1a237e;
+  color: white;
+}
+
+.report-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.report-summary {
+  background-color: #e8f5e9;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #a5d6a7;
+}
+
+.report-summary h4 {
+  margin-bottom: 10px;
+  color: #2e7d32;
 }
