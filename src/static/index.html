@@ -10,9 +10,22 @@
     <header>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
+      <div class="user-section">
+        <input type="email" id="user-email" placeholder="Enter your email" value="admin@mergington.edu" />
+        <button id="check-role-btn">Check Role</button>
+        <span id="user-role"></span>
+      </div>
     </header>
 
     <main>
+      <!-- Notifications Section -->
+      <section id="notifications-container">
+        <h3>📢 Notifications</h3>
+        <div id="notifications-list">
+          <p>Loading notifications...</p>
+        </div>
+      </section>
+
       <section id="activities-container">
         <h3>Available Activities</h3>
         <div id="activities-list">
@@ -38,6 +51,77 @@
           <button type="submit">Sign Up</button>
         </form>
         <div id="message" class="hidden"></div>
+      </section>
+
+      <!-- Admin Section (hidden by default) -->
+      <section id="admin-container" class="hidden">
+        <h3>🔧 Admin Panel</h3>
+        
+        <!-- Create Activity Form -->
+        <div class="admin-section">
+          <h4>Create New Activity</h4>
+          <form id="create-activity-form">
+            <div class="form-group">
+              <label for="new-activity-name">Activity Name:</label>
+              <input type="text" id="new-activity-name" required placeholder="e.g., Science Club" />
+            </div>
+            <div class="form-group">
+              <label for="new-activity-desc">Description:</label>
+              <input type="text" id="new-activity-desc" required placeholder="Brief description" />
+            </div>
+            <div class="form-group">
+              <label for="new-activity-schedule">Schedule:</label>
+              <input type="text" id="new-activity-schedule" required placeholder="e.g., Tuesdays 3-5PM" />
+            </div>
+            <div class="form-group">
+              <label for="new-activity-max">Max Participants:</label>
+              <input type="number" id="new-activity-max" required min="1" value="15" />
+            </div>
+            <button type="submit">Create Activity</button>
+          </form>
+        </div>
+
+        <!-- Mark Attendance Form -->
+        <div class="admin-section">
+          <h4>Mark Attendance</h4>
+          <form id="attendance-form">
+            <div class="form-group">
+              <label for="attendance-activity">Activity:</label>
+              <select id="attendance-activity" required>
+                <option value="">-- Select activity --</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="attendance-email">Student Email:</label>
+              <input type="email" id="attendance-email" required placeholder="student@mergington.edu" />
+            </div>
+            <div class="form-group">
+              <label for="attendance-date">Date:</label>
+              <input type="date" id="attendance-date" required />
+            </div>
+            <div class="form-group">
+              <label>
+                <input type="checkbox" id="attendance-present" checked /> Present
+              </label>
+            </div>
+            <button type="submit">Mark Attendance</button>
+          </form>
+        </div>
+
+        <!-- Reports Section -->
+        <div class="admin-section">
+          <h4>Reports</h4>
+          <button id="view-activities-report-btn">View Activities Report</button>
+          <button id="view-attendance-report-btn">View Attendance Report</button>
+        </div>
+        
+        <div id="admin-message" class="hidden"></div>
+      </section>
+
+      <!-- Reports Display Section -->
+      <section id="reports-container" class="hidden">
+        <h3>📊 Reports</h3>
+        <div id="reports-content"></div>
       </section>
     </main>
 
