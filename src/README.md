@@ -44,6 +44,8 @@ A FastAPI application that allows students to view, sign up for, and unregister 
 
 2. **Run the application**:
 
+   Navigate to the src directory and start the server:
+
    ```bash
    cd src
    uvicorn app:app --reload
