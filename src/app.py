@@ -97,12 +97,16 @@ activities = {
 }
 
 # In-memory notifications database
+# WARNING: Data will be lost on application restart. Use a database for production.
 notifications = []
 
 # In-memory attendance tracking
+# WARNING: Data will be lost on application restart. Use a database for production.
 attendance_records = {}
 
-# Simple user roles (in production, use proper authentication)
+# Simple user roles
+# NOTE: This is a simplified demo implementation. In production, use proper
+# authentication (OAuth, JWT tokens, etc.) instead of trusting client headers.
 user_roles = {
     "admin@mergington.edu": "admin",
     "teacher@mergington.edu": "teacher",

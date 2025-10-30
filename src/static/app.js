@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const adminContainer = document.getElementById("admin-container");
   const notificationsList = document.getElementById("notifications-list");
 
-  let currentUserEmail = "admin@mergington.edu";
+  let currentUserEmail = "";
   let isAdmin = false;
 
   // User role management
