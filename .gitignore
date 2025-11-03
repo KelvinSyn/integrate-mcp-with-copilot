@@ -41,3 +41,10 @@ __pycache__
 
 # Env files
 .env
+
+# Test and coverage files
+.pytest_cache
+.coverage
+htmlcov/
+*.cover
+.hypothesis/
